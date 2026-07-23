@@ -1,0 +1,15 @@
+flutter_native_splash:
+  color: "#202020"
+  image: assets/images/splahScreen.png
+  branding: assets/images/branding.png
+  color_dark: "#202020"
+  image_dark: assets/images/splahScreen.png
+  branding_dark: assets/images/branding.png
+
+  android_12:
+    image: assets/images/splahScreen.png
+    icon_background_color: "#202020"
+    image_dark: assets/images/splahScreen.png
+    icon_background_color_dark: "#202020"
+    branding: assets/images/branding.png
+    branding_dark: assets/images/branding.png
