@@ -44,7 +44,11 @@ class _SuraDetails2State extends State<SuraDetails2> {
         actions: [
           InkWell(
             onTap: () {
-              nextDesign = true;
+              if (nextDesign == false) {
+                nextDesign = true;
+              } else {
+                nextDesign = false;
+              }
               setState(() {});
             },
             child: ImageIcon(AssetImage(AppImage.iconQuran)),

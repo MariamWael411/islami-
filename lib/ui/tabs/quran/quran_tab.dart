@@ -105,7 +105,7 @@ class _QuranTabState extends State<QuranTab> {
                     thickness: 2,
                     indent: width(context) * 0.1,
                     endIndent: width(context) * 0.1,
-                    height: height(context) * 0.03,
+                    height: height(context) * 0.04,
                   ),
               itemCount: suraIndex.length,
             ),
