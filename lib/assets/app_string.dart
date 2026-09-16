@@ -11,4 +11,7 @@ class AppString {
   static const String noResult = 'No Result';
   static const String reciters = 'Reciters';
   static const String sebhaTitle = 'سَبِّحِ اسْمَ رَبِّكَ الأعلى';
+  static const String azkar = 'Azkar';
+  static const String eveningAzkar = 'Evening Azkar';
+  static const String morningAzkar = 'Morning Azkar';
 }

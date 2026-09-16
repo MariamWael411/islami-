@@ -38,8 +38,8 @@ class _TextButtonWidgetState extends State<TextButtonWidget> {
     return Text(widget.text, style: AppFont.whiteW40016);
   }
 
-  Container _container() {
-    return Container(
+  AnimatedContainer _container() {
+    return AnimatedContainer(
       padding: EdgeInsets.symmetric(
         horizontal: width(context) * 0.13,
         vertical: height(context) * 0.01,
@@ -48,6 +48,7 @@ class _TextButtonWidgetState extends State<TextButtonWidget> {
         color: AppColor.primaryColor,
         borderRadius: BorderRadius.circular(12),
       ),
+      duration: Duration(milliseconds: 500),
       child: Text(widget.text, style: AppFont.blackW40016),
     );
   }

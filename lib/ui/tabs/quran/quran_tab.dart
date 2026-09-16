@@ -51,6 +51,7 @@ class _QuranTabState extends State<QuranTab> {
               child: Text(AppString.noResult, style: AppFont.primaryBold24),
             )
                 : ListView.separated(
+              padding: EdgeInsets.zero,
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               itemBuilder: (context, index) =>
@@ -80,8 +81,8 @@ class _QuranTabState extends State<QuranTab> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${ModelApp
-                                    .englishQuranSurahs[suraIndex[index]]}',
+                                ModelApp
+                                    .englishQuranSurahs[suraIndex[index]],
                                 style: AppFont.whiteBold20,
                               ),
                               Text(
@@ -94,7 +95,7 @@ class _QuranTabState extends State<QuranTab> {
                           ),
                         ),
                         Text(
-                          '${ModelApp.arabicAuranSuras[suraIndex[index]]}',
+                          ModelApp.arabicAuranSuras[suraIndex[index]],
                           style: AppFont.whiteBold20,
                         ),
                       ],

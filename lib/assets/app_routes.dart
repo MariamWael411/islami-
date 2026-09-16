@@ -5,4 +5,5 @@ class AppRoute {
   static const String suraScreen2 = 'sura_screen2';
   static const String hadethScreen = 'hadeth_screen';
   static const String radioDetailsScreen = 'radio_screen';
+  static const String recitersDetailsScreen = 'reciters_screen';
 }

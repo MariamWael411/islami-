@@ -33,4 +33,8 @@ class AppImage {
   static const String pause = '${_path}Pause.png';
   static const String runDec = '${_path}runDecoration.png';
   static const String stop = '${_path}stop.png';
+  static const String timeContainer = '${_path}Group 10.png';
+  static const String mute2 = '${_path}mute2.png';
+  static const String eveningAzkar = '${_path}eveningAzkar.png';
+  static const String morningAzkar = '${_path}morningAzkar.png';
 }
