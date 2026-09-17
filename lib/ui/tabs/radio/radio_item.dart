@@ -31,7 +31,7 @@ class _RadioItemState extends State<RadioItem> {
     return Consumer<SoundManagerProvider>(
       builder: (BuildContext context, radio, Widget? child) {
         return Container(
-          padding: EdgeInsets.symmetric(vertical: height(context) * 0.03),
+          padding: EdgeInsets.symmetric(vertical: height(context) * 0.01),
           margin: EdgeInsets.only(bottom: height(context) * 0.02),
           decoration: BoxDecoration(
             color: AppColor.primaryColor,

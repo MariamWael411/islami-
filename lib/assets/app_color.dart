@@ -12,4 +12,9 @@ class AppColor {
   static const Color whiteDark = Color(0xFFFEFFE8);
   static const Color lightGrediant = Color(0xFFFEFFE8);
   static const Color darkGrediant = Color(0xFF8A652F);
+  static const Color darkBage = Color(0xFFD5C19E);
+  static const Color bageColor = Color(0xFFF5F2EB);
+
+  static const Color lightAzarColor = Color(0xFFCDAE77);
+  static const Color darkAzarColor = Color(0xFF8D7142);
 }

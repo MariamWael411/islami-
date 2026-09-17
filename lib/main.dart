@@ -8,6 +8,7 @@ import 'package:islami/ui/tabs/hadeth/hadeth_details_screen.dart';
 import 'package:islami/ui/tabs/quran/sura_details2.dart';
 import 'package:islami/ui/tabs/radio/radio_details_screen.dart';
 import 'package:islami/ui/tabs/radio/reciter_sound_details_screen.dart';
+import 'package:islami/ui/tabs/time/azkar_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -33,7 +34,9 @@ class MyApp extends StatelessWidget {
         AppRoute.suraScreen2: (context) => SuraDetails2(),
         AppRoute.hadethScreen: (context) => HadethDetailsScreen(),
         AppRoute.radioDetailsScreen: (context) => RadioDetailsScreen(),
-        AppRoute.recitersDetailsScreen: (context) => ReciterSoundDetailsScreen()
+        AppRoute.recitersDetailsScreen: (context) =>
+            ReciterSoundDetailsScreen(),
+        AppRoute.azkzarScreen: (context) => AzkarScreen()
       },
     );
   }

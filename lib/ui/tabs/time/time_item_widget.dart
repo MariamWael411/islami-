@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:islami/assets/app_color.dart';
 import 'package:islami/assets/app_font.dart';
 import 'package:islami/ui/home.dart';
 
 class TimeItemWidget extends StatelessWidget {
-  const TimeItemWidget({super.key});
+  TimeItemWidget({super.key, required this.time, required this.prayName});
+
+  String prayName;
+  String time;
 
   @override
   Widget build(BuildContext context) {
+    DateTime dateTime = DateFormat("HH:mm").parse(time);
+    String formattedTime = DateFormat("hh:mm ").format(dateTime);
+    String period = DateFormat('a').format(dateTime);
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: width(context) * 0.04,
@@ -27,9 +34,9 @@ class TimeItemWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('ASR', style: AppFont.whiteBold16),
-            Text('04:38', style: AppFont.whiteBold32),
-            Text('PM', style: AppFont.whiteBold16),
+            Text(prayName, style: AppFont.whiteBold16),
+            Text(formattedTime, style: AppFont.whiteBold32),
+            Text(period, style: AppFont.whiteBold16),
           ],
         ),
       ),
