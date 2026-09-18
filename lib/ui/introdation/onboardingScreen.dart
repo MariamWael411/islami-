@@ -1,41 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:islami/assets/app_color.dart';
-import 'package:islami/assets/app_font.dart';
-import 'package:islami/assets/app_image.dart';
-import 'package:islami/assets/app_routes.dart';
 
-import '../home.dart';
+import '../../../../../../core/utils/app_color.dart';
+import '../../../../../../core/utils/app_config.dart';
+import '../../../../../../core/utils/app_font.dart';
+import '../../../../../../core/utils/app_image.dart';
+import '../../../../../../core/utils/app_routes.dart';
+import '../home/network/model/utils/intro_model.dart';
 
 class Onboardingscreen extends StatelessWidget {
   Onboardingscreen({super.key});
 
-  List<String> titles = [
-    'Welcome To Islmi App',
-    'Welcome To Islami',
-    'Reading the Quran',
-    'Bearish',
-    'Holy Quran Radio',
-  ];
 
-  List<String> bodys = [
-    '',
-    'We Are Very Excited To Have You In Our Community',
-    'Read, and your Lord is the Most Generous',
-    'Praise the name of your Lord, the Most High',
-    'You can listen to the Holy Quran Radio through the application for free and easily',
-  ];
 
   @override
   Widget build(BuildContext context) {
+    double width = AppConfig.width(context);
+
+    double height = AppConfig.height(context);
     return Scaffold(
       backgroundColor: AppColor.black,
       body: Column(
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: width(context) * 0.15,
-              vertical: height(context) * 0.03,
+              horizontal: width * 0.15,
+              vertical: height * 0.03,
             ),
             child: Image.asset(AppImage.imageHeader),
           ),
@@ -50,13 +40,9 @@ class Onboardingscreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4.0),
                 ),
               ),
-              pages: [
-                pageViewModel(titles[0], bodys[0], AppImage.image1Intro),
-                pageViewModel(titles[1], bodys[1], AppImage.image2Intro),
-                pageViewModel(titles[2], bodys[2], AppImage.image3Intro),
-                pageViewModel(titles[3], bodys[3], AppImage.image4Intro),
-                pageViewModel(titles[4], bodys[4], AppImage.image5Intro),
-              ],
+              pages: IntroModel.introList().map((e) {
+                return pageViewModel(e.title, e.body, e.image);
+              }).toList(),
               globalBackgroundColor: AppColor.black,
               done: Text('Finish', style: AppFont.primaryBold16),
               onDone: () {
